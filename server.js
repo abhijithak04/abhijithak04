@@ -14,8 +14,8 @@ const saltround=10;
 
 
 //for get login page
-app.get("/login",(req,res)=>{
-    res.render("home")
+app.get("/",(req,res)=>{
+    res.redirect("/login")
 })
 //for get register page
 app.get("/register",(req,res)=>{
@@ -24,6 +24,10 @@ app.get("/register",(req,res)=>{
 
 app.get("/page",(req,res)=>{
     res.render("page")
+})
+
+app.get("/login",(req,res)=>{
+    res.render("home")
 })
 
 //for save details of user when register
